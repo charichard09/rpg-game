@@ -15,7 +15,7 @@ export default class Character {
       weapon: {itemName: 'space gun', trait: '2 strength'}
     };
     let scientistInv = {
-      armor: 'force shield'
+      armor: {itemName: 'force shield', trait: '2 intelligence'}
     };
     let soldierInv = {
       weapon: 'rifle'
