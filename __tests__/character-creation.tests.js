@@ -33,8 +33,7 @@ describe('Character', () => {
     expect(newCharacter.inventorySpace).toEqual(0);
   });
 
-  //defaultInventory() 
-  
+  //defaultInventory()
   test('6. It will create a default inventory for alient class', () => {
     const newCharacter = new Character('alien');
     newCharacter.defaultInventory();
@@ -65,6 +64,15 @@ describe('Character', () => {
     expect(newCharacter.coins).toEqual(10);
     expect(newCharacter.level).toEqual(1);
   });
+
+  //applyTrait()
+  test('11. It should apply the +2 intelligence to new character attribute', () => {
+    let newCharacter = new Character('scientist');
+    newCharacter.defaultInventory();
+    expect(newCharacter.intelligence).toEqual(2);
+  });
+
+
 });
 
 
