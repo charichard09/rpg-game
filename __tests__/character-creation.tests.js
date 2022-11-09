@@ -40,6 +40,12 @@ describe('Character', () => {
     newCharacter.defaultInventory();
     expect(newCharacter.inventory).toEqual({weapon: "space gun"});
   });
+
+  test('7. It will create a default inventory for scientist class', () => {
+    const newCharacter = new Character('scientist');
+    newCharacter.defaultInventory();
+    expect(newCharacter.inventory).toEqual({armor: "force shield"});
+  });
 });
 
 
