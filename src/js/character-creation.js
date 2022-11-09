@@ -4,5 +4,7 @@ export default class Character {
     this.strength = 0;
     this.intelligence = 0;
     this.agility = 0;
+    this.inventory = {};
+    this.inventorySpace = 0;
   }
 }
