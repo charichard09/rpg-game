@@ -50,6 +50,8 @@ export default class Character {
           this['strength'] += parseInt(traitArray[0]);
         } else if (traitArray[1] === 'intelligence') {
           this['intelligence'] += parseInt(traitArray[0]);
+        } else if (traitArray[1] === 'agility') {
+          this['agility'] += parseInt(traitArray[0]);
         }
       }
     });
