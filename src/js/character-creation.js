@@ -1,11 +1,13 @@
 export default class Character {
   constructor(type) {
+    this.level = 1;
     this.type = type;
     this.strength = 0;
     this.intelligence = 0;
     this.agility = 0;
     this.inventory = {};
     this.inventorySpace = 0;
+    this.coins = 10;
   }
 
   defaultInventory(){
