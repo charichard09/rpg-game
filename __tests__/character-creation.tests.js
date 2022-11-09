@@ -1,7 +1,5 @@
 // Character creation: 
-// Use class to generate different character types. 
-//   character types — scientist, alien, soldier
-//   characters should have specific properties - strength, intelligence, agility
+
 import Character from './../src/js/character-creation.js';
 
 describe('Character', () => {
@@ -29,9 +27,18 @@ describe('Character', () => {
   });
 
   test('5. It should create a new character with inventory and inventory space', () => {
-    const newCharacter = new Character('soldier');
+    const newCharacter = new Character('soldier', {});
+
     expect(newCharacter.inventory).toEqual({});
     expect(newCharacter.inventorySpace).toEqual(0);
+  });
+
+  //defaultInventory() 
+  
+  test('6. It will create a default inventory for alient class', () => {
+    const newCharacter = new Character('soldier', {});
+    newCharacter.defaultInventory();
+    expect(newCharacter.inventory).toEqual({weapon: "space gun"});
   });
 });
 
