@@ -20,6 +20,13 @@ describe('Character', () => {
     const newCharacter = new Character('soldier');
     expect(newCharacter.type).toEqual('soldier');
   });
+
+  test('4. It should create a new character with attributes strength, intelligence, agility', () => {
+    const newCharacter = new Character('soldier');
+    expect(newCharacter.strength).toEqual(0);
+    expect(newCharacter.intelligence).toEqual(0);
+    expect(newCharacter.agility).toEqual(0);
+  });
 });
 
 
