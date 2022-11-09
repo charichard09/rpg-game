@@ -6,12 +6,12 @@ import Character from './../src/js/character-creation.js';
 
 describe('Character', () => {
 
-  test('It should create a new character with type of scientist', () => {
+  test('1. It should create a new character with type of scientist', () => {
     const newCharacter = new Character('scientist');
     expect(newCharacter.type).toEqual('scientist');
   });
 
-  test('It should create a new character with type of alien', () => {
+  test('2. It should create a new character with type of alien', () => {
     const newCharacter = new Character('alien');
     expect(newCharacter.type).toEqual('alien');
   });
