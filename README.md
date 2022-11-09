@@ -84,6 +84,7 @@ Copyright (c) _date_ _author name(s)_
 
 Prompt: Build a Sci-Fi Role Playing Game.
 
+
 Character creation: 
 Use class to generate different character types. 
   character types — scientist, alien, soldier
@@ -91,7 +92,8 @@ Use class to generate different character types.
 
 //inv idea
 const alienDefaultInv = {
-  weapon: "space gun",
+  level: "1",
+  weapon: {name: "space gun", attribute: +2 strength}
   armor: "space suit",
   coin: "10"
   }
@@ -120,7 +122,18 @@ class Character {
   }
 }
 
-Battle system: Many RPGs have a battle system so characters can fight monsters, though that could just as easily be a high school 'battle' system where the prom queen has a dance-off with the theater aficionado. Determine conditions for winning a battle, whether that's defeating monsters (with swords and spells doing damage), accumulating dance-off style points, or any other system you think of.
 
-Level up: Determine a leveling system. Characters should be able to go from Level 1 to Level 2 and so on. Generally each level comes with new abilities. How do characters level up in your game? What attributes and powers do they gain? Does their strength go up or do they learn new spells?
+Battle system: 
+Determine conditions for winning a battle, defeat monsters
+//if 2 out of 3 strength, int, agility are bigger than monsters, we win
+
+// some kind players
+fight enemy option uses class to create an enemy with random properties and use determine winner function 
+
+// exp system
+if the fight is won, increase character level by 1. Multiply a random 1/3 stats by 2.
+
+// loot system
+if the fight is won, offer to add or drop a random item from a loot table {lets say 10 items in here}
+
 

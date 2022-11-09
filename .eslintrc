@@ -4,11 +4,23 @@
     "sourceType": "module"
   },
   "extends": "eslint:recommended",
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
   "env": {
     "es6": true,
     "browser": true,
     "jquery": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "rules": {
     "semi": 1,
