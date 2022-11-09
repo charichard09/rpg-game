@@ -12,7 +12,7 @@ export default class Character {
 
   defaultInventory(){
     let alienInv = {
-      weapon: 'space gun'
+      weapon: {itemName: 'space gun', trait: '2 strength'}
     };
     let scientistInv = {
       armor: 'force shield'
@@ -31,11 +31,4 @@ export default class Character {
       this.inventory = {};
     }
   }
-  // defaultInventory() {
-  //   alienInv = {space gun, space suit}
-
-  //   if this.type === alien {
-  //     this.inventory = alienInv
-  //   }
-  // }
 }
