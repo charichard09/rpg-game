@@ -80,6 +80,13 @@ describe('Character', () => {
     expect(newCharacter.strength).toEqual(2);
   });
 
+  test('13. It should apply the +2 agility to new character attribute', () => {
+    let newCharacter = new Character('soldier');
+    newCharacter.defaultInventory();
+    newCharacter.addTrait();
+    expect(newCharacter.agility).toEqual(2);
+  });
+
 
 });
 
