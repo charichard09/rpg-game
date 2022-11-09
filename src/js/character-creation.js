@@ -18,7 +18,7 @@ export default class Character {
       armor: {itemName: 'force shield', trait: '2 intelligence'}
     };
     let soldierInv = {
-      weapon: 'rifle'
+      weapon: {itemName: 'rifle', trait: '2 agility'}
     };
     
     if (this.type === 'alien') {
