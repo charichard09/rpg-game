@@ -27,7 +27,7 @@ describe('Character', () => {
   });
 
   test('5. It should create a new character with inventory and inventory space', () => {
-    const newCharacter = new Character('soldier', {});
+    const newCharacter = new Character('soldier');
 
     expect(newCharacter.inventory).toEqual({});
     expect(newCharacter.inventorySpace).toEqual(0);
@@ -57,6 +57,13 @@ describe('Character', () => {
     const newCharacter = new Character('');
     newCharacter.defaultInventory();
     expect(newCharacter.inventory).toMatchObject({});
+  });
+
+  test('10. It should create a new character with level 1 with 10 coins', () => {
+    const newCharacter = new Character('soldier');
+
+    expect(newCharacter.coins).toEqual(10);
+    expect(newCharacter.level).toEqual(1);
   });
 });
 
