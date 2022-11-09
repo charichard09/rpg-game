@@ -11,10 +11,10 @@ describe('Character', () => {
     expect(newCharacter.type).toEqual('scientist');
   });
 
-  // test('It should create a new character with type of alien', () => {
-  //   const newCharacter = new Character('alien');
-  //   expect(newCharacter.type).toEqual('alien');
-  // });
+  test('It should create a new character with type of alien', () => {
+    const newCharacter = new Character('alien');
+    expect(newCharacter.type).toEqual('alien');
+  });
 });
 
 
