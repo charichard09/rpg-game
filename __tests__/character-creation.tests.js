@@ -69,7 +69,15 @@ describe('Character', () => {
   test('11. It should apply the +2 intelligence to new character attribute', () => {
     let newCharacter = new Character('scientist');
     newCharacter.defaultInventory();
+    newCharacter.addTrait();
     expect(newCharacter.intelligence).toEqual(2);
+  });
+
+  test('12. It should apply the +2 strength to new character attribute', () => {
+    let newCharacter = new Character('alien');
+    newCharacter.defaultInventory();
+    newCharacter.addTrait();
+    expect(newCharacter.strength).toEqual(2);
   });
 
 
