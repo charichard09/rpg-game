@@ -27,6 +27,12 @@ describe('Character', () => {
     expect(newCharacter.intelligence).toEqual(0);
     expect(newCharacter.agility).toEqual(0);
   });
+
+  test('5. It should create a new character with inventory and inventory space', () => {
+    const newCharacter = new Character('soldier');
+    expect(newCharacter.inventory).toEqual({});
+    expect(newCharacter.inventorySpace).toEqual(0);
+  });
 });
 
 
