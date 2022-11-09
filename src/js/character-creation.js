@@ -12,9 +12,14 @@ export default class Character {
     let alienInv = {
       weapon: 'space gun'
     };
+    let scientistInv = {
+      armor: 'force shield'
+    };
     
     if (this.type === 'alien') {
       this.inventory = alienInv;
+    } else if (this.type === 'scientist') {
+      this.inventory = scientistInv;
     }
   }
   // defaultInventory() {

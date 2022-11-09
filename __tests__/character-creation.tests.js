@@ -46,6 +46,12 @@ describe('Character', () => {
     newCharacter.defaultInventory();
     expect(newCharacter.inventory).toEqual({armor: "force shield"});
   });
+
+  test('8. It will create a default inventory for soldier class', () => {
+    const newCharacter = new Character('soldier');
+    newCharacter.defaultInventory();
+    expect(newCharacter.inventory).toEqual({weapon: "rifle"});
+  });
 });
 
 
