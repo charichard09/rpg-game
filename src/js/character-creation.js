@@ -25,6 +25,8 @@ export default class Character {
       this.inventory = scientistInv;
     } else if (this.type === 'soldier') {
       this.inventory = soldierInv;
+    } else {
+      this.inventory = {};
     }
   }
   // defaultInventory() {
