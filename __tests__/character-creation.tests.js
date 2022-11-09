@@ -52,6 +52,12 @@ describe('Character', () => {
     newCharacter.defaultInventory();
     expect(newCharacter.inventory).toEqual({weapon: "rifle"});
   });
+
+  test('9. It will create a default inventory for no class selected', () => {
+    const newCharacter = new Character('');
+    newCharacter.defaultInventory();
+    expect(newCharacter.inventory).toMatchObject({weapon: ""});
+  });
 });
 
 
