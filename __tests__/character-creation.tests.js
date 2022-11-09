@@ -15,6 +15,11 @@ describe('Character', () => {
     const newCharacter = new Character('alien');
     expect(newCharacter.type).toEqual('alien');
   });
+
+  test('3. It should create a new character with type of soldier', () => {
+    const newCharacter = new Character('soldier');
+    expect(newCharacter.type).toEqual('soldier');
+  });
 });
 
 
