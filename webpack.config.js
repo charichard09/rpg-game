@@ -17,7 +17,7 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'name',
+      title: 'rpg-game',
       template: './src/index.html',
       inject: 'body'
     })

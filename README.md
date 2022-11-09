@@ -77,3 +77,50 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Copyright (c) _date_ _author name(s)_
+
+
+
+
+
+Prompt: Build a Sci-Fi Role Playing Game.
+
+Character creation: 
+Use class to generate different character types. 
+  character types — scientist, alien, soldier
+  characters should have specific properties - strength, intelligence, agility
+
+//inv idea
+const alienDefaultInv = {
+  weapon: "space gun",
+  armor: "space suit",
+  coin: "10"
+  }
+
+if alien chosen, pass alienDefaultInv to character object creation
+
+class Character {
+  constructor(type, inventory) {
+    this.type = type;
+    this.inventory = inventory;
+    this.inventorySpace = 0;
+  }
+}
+
+Characters should be able to add, drop, buy and sell items.
+
+class Character {
+  ...code above
+
+  dropItem(item) {
+    delete this.inventory[item];
+  }
+  addItem(item) {
+
+    //if Object.keys(this.inventory).length > 10, print some error 
+  }
+}
+
+Battle system: Many RPGs have a battle system so characters can fight monsters, though that could just as easily be a high school 'battle' system where the prom queen has a dance-off with the theater aficionado. Determine conditions for winning a battle, whether that's defeating monsters (with swords and spells doing damage), accumulating dance-off style points, or any other system you think of.
+
+Level up: Determine a leveling system. Characters should be able to go from Level 1 to Level 2 and so on. Generally each level comes with new abilities. How do characters level up in your game? What attributes and powers do they gain? Does their strength go up or do they learn new spells?
+
