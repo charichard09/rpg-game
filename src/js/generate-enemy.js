@@ -5,5 +5,6 @@ export default function generateEnemy() {
   const typeArray = ['Cthulu', 'Predator', 'Space Marine'];
   randomChar.type = typeArray[Math.floor(Math.random() * 3)];
   randomChar.intelligence = Math.floor(Math.random() * 5) + 1;
+  randomChar.strength = Math.floor(Math.random() * 5) + 1;
   return randomChar;
 }
