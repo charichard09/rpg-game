@@ -32,49 +32,55 @@ describe('Character', () => {
     expect(newCharacter.inventorySpace).toEqual(0);
   });
 
-  //defaultInventory()
+  //defaultSetup()
   test('6. It will create a default inventory for alient class', () => {
     const newCharacter = new Character('alien');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     expect(newCharacter.inventory).toEqual({weapon: {itemName: 'space gun', trait: '2 strength'}, coin: 10});
   });
 
   test('7. It will create a default inventory for scientist class', () => {
     const newCharacter = new Character('scientist');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     expect(newCharacter.inventory).toEqual({armor: {itemName: 'force shield', trait: '2 intelligence'}, coin: 10});
   });
 
   test('8. It will create a default inventory for soldier class', () => {
     const newCharacter = new Character('soldier');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     expect(newCharacter.inventory).toEqual({weapon: {itemName: 'rifle', trait: '2 agility'}, coin: 10});
   });
 
-  test('9. It will create a default inventory for no class selected', () => {
+  test('9. It will create a default inventory of nothing for no class selected', () => {
     const newCharacter = new Character('');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     expect(newCharacter.inventory).toMatchObject({});
+  });
+
+  test('10. It will add a default +10 to stats for scientist', () => {
+    const newCharacter = new Character('scientist');
+    newCharacter.defaultSetup();
+    expect(newCharacter.intelligence).toEqual(5);
   });
 
   //applyTrait()
   test('10. It should apply the +2 intelligence to new character attribute', () => {
     let newCharacter = new Character('scientist');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     newCharacter.addTrait();
     expect(newCharacter.intelligence).toEqual(2);
   });
 
   test('11. It should apply the +2 strength to new character attribute', () => {
     let newCharacter = new Character('alien');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     newCharacter.addTrait();
     expect(newCharacter.strength).toEqual(2);
   });
 
   test('12. It should apply the +2 agility to new character attribute', () => {
     let newCharacter = new Character('soldier');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     newCharacter.addTrait();
     expect(newCharacter.agility).toEqual(2);
   });
@@ -82,21 +88,21 @@ describe('Character', () => {
   //dropItem(item)
   test('13. It will delete an item from inventory', () => {
     let newCharacter = new Character('soldier');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     newCharacter.dropItem('weapon');
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
   test('14. It will delete an item from inventory', () => {
     let newCharacter = new Character('alien');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     newCharacter.dropItem('weapon');
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
   test('15. It will delete an "rock" item from inventory', () => {
     let newCharacter = new Character('alien');
-    newCharacter.defaultInventory();
+    newCharacter.defaultSetup();
     newCharacter.inventory.rock = "This item has no value";
     newCharacter.dropItem('rock');
     expect(newCharacter.inventory).toEqual({weapon: {itemName: 'space gun', trait: '2 strength'},

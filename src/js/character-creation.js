@@ -9,7 +9,7 @@ export default class Character {
     this.inventorySpace = 0;
   }
 
-  defaultInventory(){
+  defaultSetup(){
     let alienInv = {
       weapon: {itemName: 'space gun', trait: '2 strength'},
       coin: 10
