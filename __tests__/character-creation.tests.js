@@ -57,7 +57,7 @@ describe('Character', () => {
     expect(newCharacter.inventory).toMatchObject({});
   });
 
-  test('10. It will add a default +10 to stats for scientist', () => {
+  test('10. It will add a default +5 to int for scientist', () => {
     const newCharacter = new Character('scientist');
     newCharacter.defaultSetup();
     expect(newCharacter.intelligence).toEqual(5);
