@@ -19,6 +19,12 @@ describe('generateEnemy', () => {
     expect(randomChar.strength).toBeGreaterThanOrEqual(1);
     expect(randomChar.strength).toBeLessThan(6);
   });
+
+  test('4. It will generate a random agility stat for character', () => {
+    let randomChar = generateEnemy();    
+    expect(randomChar.agility).toBeGreaterThanOrEqual(1);
+    expect(randomChar.agility).toBeLessThan(6);
+  });
 });
 
 
