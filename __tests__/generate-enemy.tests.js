@@ -5,7 +5,13 @@ describe('generateEnemy', () => {
 
   test('1. It will generate a random character', () => {
     let randomChar = generateEnemy();    
-    expect(/(scientist|alien|soldier)/.test(randomChar.type)).toBeTruthy();
+    expect(/(Cthulu|Predator|Space Marine)/.test(randomChar.type)).toBeTruthy();
+  });
+
+  test('2. It will generate a random intelligence stat for character', () => {
+    let randomChar = generateEnemy();    
+    expect(randomChar.intelligence).toBeGreaterThanOrEqual(1);
+    expect(randomChar.intelligence).toBeLessThan(6);
   });
 });
 

@@ -109,21 +109,21 @@ describe('Character', () => {
 
 
   //applyTrait()
-  test('16. It should apply the +2 intelligence to new character attribute', () => {
+  test('18. It should apply the +2 intelligence to new character attribute', () => {
     let newCharacter = new Character('scientist');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
     expect(newCharacter.intelligence).toEqual(7);
   });
 
-  test('17. It should apply the +2 strength to new character attribute', () => {
+  test('19. It should apply the +2 strength to new character attribute', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
     expect(newCharacter.strength).toEqual(4);
   });
 
-  test('12. It should apply the +2 agility to new character attribute', () => {
+  test('20. It should apply the +2 agility to new character attribute', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
@@ -131,21 +131,21 @@ describe('Character', () => {
   });
 
   //dropItem(item)
-  test('13. It will delete an item from inventory', () => {
+  test('21. It will delete an item from inventory', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultSetup();
     newCharacter.dropItem('weapon');
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
-  test('14. It will delete an item from inventory', () => {
+  test('22. It will delete an item from inventory', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultSetup();
     newCharacter.dropItem('weapon');
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
-  test('15. It will delete an "rock" item from inventory', () => {
+  test('23. It will delete an "rock" item from inventory', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultSetup();
     newCharacter.inventory.rock = "This item has no value";
@@ -155,7 +155,7 @@ describe('Character', () => {
   });
 
   //addItem(item)
-  test('16. It will add "rock" to newCharacter inventory', () => {
+  test('24. It will add "rock" to newCharacter inventory', () => {
     let newCharacter = new Character('alien');
     newCharacter.addItem({rock: "This item has no value"});
     expect(Object.hasOwn(newCharacter.inventory, 'rock')).toBeTruthy();
