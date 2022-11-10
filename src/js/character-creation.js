@@ -26,6 +26,7 @@ export default class Character {
     if (this.type === 'alien') {
       this.inventory = alienInv;
       this.strength = 2;
+      this.intelligence = 3;
     } else if (this.type === 'scientist') {
       this.inventory = scientistInv;
       this.intelligence = 5;
