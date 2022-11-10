@@ -95,8 +95,12 @@ describe('Character', () => {
     expect(newCharacter.inventory).toEqual({});
   });
 
-
-
+  test('14. It will delete an item from inventory', () => {
+    let newCharacter = new Character('alien');
+    newCharacter.defaultInventory();
+    newCharacter.dropItem();
+    expect(newCharacter.inventory).toEqual({});
+  });
 
 });
 

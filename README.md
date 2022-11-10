@@ -84,11 +84,12 @@ Copyright (c) _date_ _author name(s)_
 
 Prompt: Build a Sci-Fi Role Playing Game.
 
-
 Character creation: 
 Use class to generate different character types. 
   character types — scientist, alien, soldier
   characters should have specific properties - strength, intelligence, agility
+
+  if alien chosen, pass alienDefaultInv to character object creation
 
 //inv idea
 const alienDefaultInv = {
@@ -98,17 +99,10 @@ const alienDefaultInv = {
   coin: "10"
   }
 
-if alien chosen, pass alienDefaultInv to character object creation
 
-class Character {
-  constructor(type, inventory) {
-    this.type = type;
-    this.inventory = inventory;
-    this.inventorySpace = 0;
-  }
-}
 
-Characters should be able to add, drop, buy and sell items.
+
+Characters should be able to add, drop, buy and sell items:
 
 class Character {
   ...code above

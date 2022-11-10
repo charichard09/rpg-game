@@ -32,23 +32,28 @@ export default class Character {
     }
   }
 
+  // invItems.forEach((item) => 
   addTrait() {
     const invItems = Object.keys(this.inventory);
-    invItems.forEach((item) => {
+    for (const item of invItems) {
       if (Object.hasOwn(this.inventory[item], 'trait')) {
         const traitArray = this.inventory[item].trait.split(' ');
         if (traitArray[1] === 'strength') {
           this['strength'] += parseInt(traitArray[0]);
         } else if (traitArray[1] === 'intelligence') {
           this['intelligence'] += parseInt(traitArray[0]);
-        } else if (traitArray[1] === 'agility') {
+        } else {
           this['agility'] += parseInt(traitArray[0]);
         }
+      } else {
+        continue;
       }
-    });
+    }
   }
 
+
   dropItem() {
-    delete this.inventory.weapon;
+    let invArray = Object.keys(this.inventory);
+    delete this.inventory[invArray[0]];
   }
 }
