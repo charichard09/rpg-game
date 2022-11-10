@@ -29,7 +29,7 @@ describe('Character', () => {
   test('5. It should create a new character with inventory and inventory space', () => {
     const newCharacter = new Character('soldier');
 
-    expect(newCharacter.inventory).toEqual({});
+    expect(newCharacter.inventory).toEqual({coin: 10});
     expect(newCharacter.inventorySpace).toEqual(0);
   });
 

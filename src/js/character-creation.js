@@ -12,13 +12,16 @@ export default class Character {
 
   defaultInventory(){
     let alienInv = {
-      weapon: {itemName: 'space gun', trait: '2 strength'}
+      weapon: {itemName: 'space gun', trait: '2 strength'},
+      coin: 10
     };
     let scientistInv = {
-      armor: {itemName: 'force shield', trait: '2 intelligence'}
+      armor: {itemName: 'force shield', trait: '2 intelligence'},
+      coin: 10
     };
     let soldierInv = {
-      weapon: {itemName: 'rifle', trait: '2 agility'}
+      weapon: {itemName: 'rifle', trait: '2 agility'},
+      coin: 10
     };
     
     if (this.type === 'alien') {
@@ -36,6 +39,7 @@ export default class Character {
   addTrait() {
     const invItems = Object.keys(this.inventory);
     for (const item of invItems) {
+      console.log(item);
       if (Object.hasOwn(this.inventory[item], 'trait')) {
         const traitArray = this.inventory[item].trait.split(' ');
         if (traitArray[1] === 'strength') {
