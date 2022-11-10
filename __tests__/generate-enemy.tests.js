@@ -10,10 +10,6 @@ describe('generateEnemy', () => {
 
   test('2. It will distribute randomly 10 points across 3 stats', () => { 
     let randomChar = generateEnemy();
-
-    console.log(randomChar.strength)
-    console.log(randomChar.intelligence)
-    console.log(randomChar.agility)
     expect(randomChar.agility + randomChar.strength + randomChar.intelligence).toEqual(10);
 
     // expect(randomChar.agility).toBeGreaterThanOrEqual(0);

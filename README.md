@@ -125,10 +125,12 @@ Determine conditions for winning a battle, defeat players
 // some kind players
 fight enemy option uses class to create an enemy with random properties and use determine winner function 
 
+// loot system
+if the fight is won, offer to add or drop a random item from a loot table {lets say 10 items in here}
+
 // exp system
 if the fight is won, increase character level by 1. Multiply a random 1/3 stats by 2.
 
-// loot system
-if the fight is won, offer to add or drop a random item from a loot table {lets say 10 items in here}
+
 
 
