@@ -53,8 +53,8 @@ export default class Character {
     }
   }
 
-  dropItem() {
-    let invArray = Object.keys(this.inventory);
-    delete this.inventory[invArray[0]];
+  dropItem(item) {
+    // let invArray = Object.keys(this.inventory);
+    delete this.inventory[item];
   }
 }

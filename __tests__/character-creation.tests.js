@@ -80,18 +80,18 @@ describe('Character', () => {
     expect(newCharacter.agility).toEqual(2);
   });
 
-  //dropItem()
+  //dropItem(item)
   test('13. It will delete an item from inventory', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultInventory();
-    newCharacter.dropItem();
+    newCharacter.dropItem('weapon');
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
   test('14. It will delete an item from inventory', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultInventory();
-    newCharacter.dropItem();
+    newCharacter.dropItem('weapon');
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
@@ -99,9 +99,16 @@ describe('Character', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultInventory();
     newCharacter.inventory.rock = "This item has no value";
-    newCharacter.dropItem();
+    newCharacter.dropItem('rock');
     expect(newCharacter.inventory).toEqual({weapon: {itemName: 'space gun', trait: '2 strength'},
       coin: 10});
+  });
+
+  //addItem(item)
+  test('16. It will add "rock" to newCharacter inventory', () => {
+    let newCharacter = new Character('alien');
+
+    expect(Object.hasOwn(newCharacter.inventory, 'rock')).toBeTruthy();
   });
 });
 
