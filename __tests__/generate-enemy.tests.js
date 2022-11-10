@@ -13,6 +13,12 @@ describe('generateEnemy', () => {
     expect(randomChar.intelligence).toBeGreaterThanOrEqual(1);
     expect(randomChar.intelligence).toBeLessThan(6);
   });
+
+  test('3. It will generate a random strength stat for character', () => {
+    let randomChar = generateEnemy();    
+    expect(randomChar.strength).toBeGreaterThanOrEqual(1);
+    expect(randomChar.strength).toBeLessThan(6);
+  });
 });
 
 
