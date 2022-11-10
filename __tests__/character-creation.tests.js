@@ -63,6 +63,13 @@ describe('Character', () => {
     expect(newCharacter.intelligence).toEqual(5);
   });
 
+  test('11. It will add a default +2 to strength for scientist', () => {
+    const newCharacter = new Character('scientist');
+    newCharacter.defaultSetup();
+    expect(newCharacter.strength).toEqual(2);
+  });
+
+
   //applyTrait()
   test('10. It should apply the +2 intelligence to new character attribute', () => {
     let newCharacter = new Character('scientist');
