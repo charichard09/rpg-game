@@ -88,6 +88,12 @@ describe('Character', () => {
     expect(newCharacter.intelligence).toEqual(2);
   });
 
+  test('15. It will add a default +2 to strength for alien', () => {
+    const newCharacter = new Character('alien');
+    newCharacter.defaultSetup();
+    expect(newCharacter.strength).toEqual(2);
+  });
+
 
   //applyTrait()
   test('10. It should apply the +2 intelligence to new character attribute', () => {
@@ -101,14 +107,14 @@ describe('Character', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
-    expect(newCharacter.strength).toEqual(2);
+    expect(newCharacter.strength).toEqual(4);
   });
 
   test('12. It should apply the +2 agility to new character attribute', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
-    expect(newCharacter.agility).toEqual(2);
+    expect(newCharacter.agility).toEqual(4);
   });
 
   //dropItem(item)
