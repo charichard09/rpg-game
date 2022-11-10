@@ -32,6 +32,7 @@ export default class Character {
       this.agility = 3;
     } else if (this.type === 'soldier') {
       this.inventory = soldierInv;
+      this.strength = 6;
     } else {
       this.inventory = {};
     }
