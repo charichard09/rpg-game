@@ -29,7 +29,7 @@ describe('Character', () => {
   test('5. It should create a new character with inventory and inventory space', () => {
     const newCharacter = new Character('soldier');
 
-    expect(newCharacter.inventory).toEqual({coin: 10});
+    expect(newCharacter.inventory).toEqual({});
     expect(newCharacter.inventorySpace).toEqual(0);
   });
 
@@ -37,7 +37,7 @@ describe('Character', () => {
   test('6. It will create a default inventory for alient class', () => {
     const newCharacter = new Character('alien');
     newCharacter.defaultInventory();
-    expect(newCharacter.inventory).toEqual({weapon: {itemName: 'space gun', trait: '2 strength'}});
+    expect(newCharacter.inventory).toEqual({weapon: {itemName: 'space gun', trait: '2 strength'}, coin: 10});
   });
 
   test('7. It will create a default inventory for scientist class', () => {
