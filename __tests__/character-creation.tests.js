@@ -49,7 +49,7 @@ describe('Character', () => {
   test('8. It will create a default inventory for soldier class', () => {
     const newCharacter = new Character('soldier');
     newCharacter.defaultInventory();
-    expect(newCharacter.inventory).toEqual({weapon: {itemName: 'rifle', trait: '2 agility'}});
+    expect(newCharacter.inventory).toEqual({weapon: {itemName: 'rifle', trait: '2 agility'}, coin: 10});
   });
 
   test('9. It will create a default inventory for no class selected', () => {
