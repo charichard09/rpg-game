@@ -6,7 +6,7 @@ describe ('battle', () => {
 
   test ('1. It will return true if character strength is greater than random character', () => {
     let newCharacter = new Character('soldier');
-    expect(battle(newCharacter)).toBeTruthy();
+    expect(battle(newCharacter)).toEqual(1);
   });
 
 })

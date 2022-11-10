@@ -1,5 +1,11 @@
-// import generateEnemy from "./generate-enemy.js";
+import generateEnemy from "./generate-enemy.js";
 
 export default function battle(character) {
-  // generateEnemy();
+  const randomEnemy = generateEnemy();
+  let points = 0;
+
+  if (randomEnemy.strength <= character.strength) {
+    points += 1;
+  }
+  return points;
 }
