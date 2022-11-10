@@ -33,15 +33,6 @@ export default class Character {
   }
 
   addTrait() {
-    // let traitArr = this.inventory.weapon.trait.split(' ');
-    // let charArr = Object.keys(this);
-    // charArr.forEach((attribute) => {
-    //   if (attribute === traitArr[1]) {
-    //     this[attribute] += parseInt(traitArr[0]);
-    //   }
-    // });
-    
-
     const invItems = Object.keys(this.inventory);
     invItems.forEach((item) => {
       if (Object.hasOwn(this.inventory[item], 'trait')) {
@@ -55,5 +46,9 @@ export default class Character {
         }
       }
     });
+  }
+
+  dropItem() {
+    delete this.inventory.weapon;
   }
 }

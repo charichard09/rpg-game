@@ -87,6 +87,16 @@ describe('Character', () => {
     expect(newCharacter.agility).toEqual(2);
   });
 
+  //dropItem()
+  test('13. It will delete an item from inventory', () => {
+    let newCharacter = new Character('soldier');
+    newCharacter.defaultInventory();
+    newCharacter.dropItem();
+    expect(newCharacter.inventory).toEqual({});
+  });
+
+
+
 
 });
 
