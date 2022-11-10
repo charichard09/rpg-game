@@ -1,5 +1,5 @@
-// import Character from "./character-creation.js";
+// import generateEnemy from "./generate-enemy.js";
 
-// export default function battle() {
-
-// }
+export default function battle(character) {
+  // generateEnemy();
+}
