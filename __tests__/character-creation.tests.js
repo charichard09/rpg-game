@@ -58,29 +58,22 @@ describe('Character', () => {
     expect(newCharacter.inventory).toMatchObject({});
   });
 
-  test('10. It should create a new character with level 1 with 10 coins', () => {
-    const newCharacter = new Character('soldier');
-
-    expect(newCharacter.coins).toEqual(10);
-    expect(newCharacter.level).toEqual(1);
-  });
-
   //applyTrait()
-  test('11. It should apply the +2 intelligence to new character attribute', () => {
+  test('10. It should apply the +2 intelligence to new character attribute', () => {
     let newCharacter = new Character('scientist');
     newCharacter.defaultInventory();
     newCharacter.addTrait();
     expect(newCharacter.intelligence).toEqual(2);
   });
 
-  test('12. It should apply the +2 strength to new character attribute', () => {
+  test('11. It should apply the +2 strength to new character attribute', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultInventory();
     newCharacter.addTrait();
     expect(newCharacter.strength).toEqual(2);
   });
 
-  test('13. It should apply the +2 agility to new character attribute', () => {
+  test('12. It should apply the +2 agility to new character attribute', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultInventory();
     newCharacter.addTrait();
@@ -88,14 +81,14 @@ describe('Character', () => {
   });
 
   //dropItem()
-  test('14. It will delete an item from inventory', () => {
+  test('13. It will delete an item from inventory', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultInventory();
     newCharacter.dropItem();
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
-  test('15. It will delete an item from inventory', () => {
+  test('14. It will delete an item from inventory', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultInventory();
     newCharacter.dropItem();

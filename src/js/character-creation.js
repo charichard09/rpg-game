@@ -7,7 +7,6 @@ export default class Character {
     this.agility = 0;
     this.inventory = {};
     this.inventorySpace = 0;
-    this.coins = 10;
   }
 
   defaultInventory(){
@@ -43,6 +42,8 @@ export default class Character {
       //reaches our else condition. but even though hard coding 'coins' into constructor didnt work yesterday, it was
       //because when we call 'defaultInv', we replace inv that has 'coins' with an inv with only 'traits'.
       //solution is to hard code 'coins' not in constructor, but where we update inv, in defaultInv()  
+      //ALSO, with the addition I had to refactor tests 6, 7, 8, 14, 15 to have 'coin: 10'
+      //removed test10 which added coins 10 to constructor
       //console.log(item);
       if (Object.hasOwn(this.inventory[item], 'trait')) {
         const traitArray = this.inventory[item].trait.split(' ');
