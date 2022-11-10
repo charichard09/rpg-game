@@ -94,16 +94,22 @@ describe('Character', () => {
     expect(newCharacter.strength).toEqual(2);
   });
 
+  test('16. It will add a default +3 to intelligence for alien', () => {
+    const newCharacter = new Character('alien');
+    newCharacter.defaultSetup();
+    expect(newCharacter.intelligence).toEqual(3);
+  });
+
 
   //applyTrait()
-  test('10. It should apply the +2 intelligence to new character attribute', () => {
+  test('16. It should apply the +2 intelligence to new character attribute', () => {
     let newCharacter = new Character('scientist');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
     expect(newCharacter.intelligence).toEqual(7);
   });
 
-  test('11. It should apply the +2 strength to new character attribute', () => {
+  test('17. It should apply the +2 strength to new character attribute', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
