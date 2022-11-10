@@ -38,13 +38,6 @@ export default class Character {
   addTrait() {
     const invItems = Object.keys(this.inventory);
     for (const item of invItems) {
-      //TO DELETE: added console.log to check every item being checked. Like Daniel noted yesterday, our if statement never
-      //reaches our else condition. but even though hard coding 'coins' into constructor didnt work yesterday, it was
-      //because when we call 'defaultInv', we replace inv that has 'coins' with an inv with only 'traits'.
-      //solution is to hard code 'coins' not in constructor, but where we update inv, in defaultInv()  
-      //ALSO, with the addition I had to refactor tests 6, 7, 8, 14, 15 to have 'coin: 10'
-      //removed test10 which added coins 10 to constructor
-      //console.log(item);
       if (Object.hasOwn(this.inventory[item], 'trait')) {
         const traitArray = this.inventory[item].trait.split(' ');
         if (traitArray[1] === 'strength') {
@@ -59,7 +52,6 @@ export default class Character {
       }
     }
   }
-
 
   dropItem() {
     let invArray = Object.keys(this.inventory);

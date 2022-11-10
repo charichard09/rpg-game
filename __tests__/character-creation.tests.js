@@ -95,6 +95,14 @@ describe('Character', () => {
     expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
+  test('15. It will delete an "rock" item from inventory', () => {
+    let newCharacter = new Character('alien');
+    newCharacter.defaultInventory();
+    newCharacter.inventory.rock = "This item has no value";
+    newCharacter.dropItem();
+    expect(newCharacter.inventory).toEqual({weapon: {itemName: 'space gun', trait: '2 strength'},
+      coin: 10});
+  });
 });
 
 
