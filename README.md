@@ -99,9 +99,6 @@ const alienDefaultInv = {
   coin: "10"
   }
 
-
-
-
 Characters should be able to add, drop, buy and sell items:
 
 class Character {
@@ -117,9 +114,13 @@ class Character {
 }
 
 
+
+
+
+
 Battle system: 
-Determine conditions for winning a battle, defeat monsters
-//if 2 out of 3 strength, int, agility are bigger than monsters, we win
+Determine conditions for winning a battle, defeat players
+//if 2 out of 3 strength, int, agility are bigger than players, we win
 
 // some kind players
 fight enemy option uses class to create an enemy with random properties and use determine winner function 

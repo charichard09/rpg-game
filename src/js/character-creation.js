@@ -60,7 +60,7 @@ export default class Character {
 
   //{rock: "This item has no value"}
   //{weapon: {itemName: "rifle", trait: "2 strength"}}
-  addItem(item) {
+  addItem(item) {    
     const itemArray = Object.entries(item);
     this.inventory[itemArray[0][0]] = itemArray[0][1];
   }
