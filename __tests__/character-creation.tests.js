@@ -88,14 +88,14 @@ describe('Character', () => {
   });
 
   //dropItem()
-  test('13. It will delete an item from inventory', () => {
+  test('14. It will delete an item from inventory', () => {
     let newCharacter = new Character('soldier');
     newCharacter.defaultInventory();
     newCharacter.dropItem();
-    expect(newCharacter.inventory).toEqual({});
+    expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
-  test('14. It will delete an item from inventory', () => {
+  test('15. It will delete an item from inventory', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultInventory();
     newCharacter.dropItem();
