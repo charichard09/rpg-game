@@ -99,7 +99,7 @@ describe('Character', () => {
     let newCharacter = new Character('alien');
     newCharacter.defaultInventory();
     newCharacter.dropItem();
-    expect(newCharacter.inventory).toEqual({});
+    expect(newCharacter.inventory).toEqual({coin: 10});
   });
 
 });
