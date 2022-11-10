@@ -107,6 +107,7 @@ describe('Character', () => {
   //addItem(item)
   test('16. It will add "rock" to newCharacter inventory', () => {
     let newCharacter = new Character('alien');
+    newCharacter.addItem('rock');
 
     expect(Object.hasOwn(newCharacter.inventory, 'rock')).toBeTruthy();
   });

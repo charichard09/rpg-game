@@ -57,4 +57,8 @@ export default class Character {
     // let invArray = Object.keys(this.inventory);
     delete this.inventory[item];
   }
+
+  addItem(item) {
+    
+  }
 }
