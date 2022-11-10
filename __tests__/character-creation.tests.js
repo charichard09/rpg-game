@@ -68,7 +68,7 @@ describe('Character', () => {
     let newCharacter = new Character('scientist');
     newCharacter.defaultSetup();
     newCharacter.addTrait();
-    expect(newCharacter.intelligence).toEqual(2);
+    expect(newCharacter.intelligence).toEqual(7);
   });
 
   test('11. It should apply the +2 strength to new character attribute', () => {
