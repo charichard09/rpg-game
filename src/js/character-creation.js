@@ -58,7 +58,10 @@ export default class Character {
     delete this.inventory[item];
   }
 
+  //{rock: "This item has no value"}
+  //{weapon: {itemName: "rifle", trait: "2 strength"}}
   addItem(item) {
-    
+    const itemArray = Object.entries(item);
+    this.inventory[itemArray[0][0]] = itemArray[0][1];
   }
 }
