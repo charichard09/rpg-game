@@ -100,6 +100,13 @@ describe('Character', () => {
     expect(newCharacter.intelligence).toEqual(3);
   });
 
+  test('16. It will add a default +5 to agility for alien', () => {
+    const newCharacter = new Character('alien');
+    newCharacter.defaultSetup();
+    expect(newCharacter.agility).toEqual(5);
+  });
+
+
 
   //applyTrait()
   test('16. It should apply the +2 intelligence to new character attribute', () => {
