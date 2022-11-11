@@ -10,6 +10,7 @@ describe('generateEnemy', () => {
   test('2. It will distribute randomly 10 points across 3 stats', () => { 
     let randomChar = generateEnemy();
     expect(randomChar.agility + randomChar.strength + randomChar.intelligence).toEqual(10);
+    console.log(randomChar);
   });
 
   test('3. It will add a lootTable to the enemy', () => { 
