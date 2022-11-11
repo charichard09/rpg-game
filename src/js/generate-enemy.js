@@ -6,8 +6,8 @@ export default function generateEnemy() {
   randomChar.type = typeArray[Math.floor(Math.random() * 3)];
 
   let pointTotal = 10;
-  let randomPoints1 = Math.floor(Math.random() * pointTotal) + 1;
-  let randomPoints2 = Math.floor(Math.random() * (pointTotal - randomPoints1)) + 1;
+  let randomPoints1 = Math.floor(Math.random() * (pointTotal+ 1)) ;
+  let randomPoints2 = Math.floor(Math.random() * ((pointTotal + 1) - randomPoints1));
   let randomPoints3 = pointTotal - (randomPoints2 + randomPoints1);
 
   let randomArray = [randomPoints1, randomPoints2, randomPoints3];
