@@ -1,7 +1,7 @@
-import generateEnemy from "./generate-enemy.js";
+// import generateEnemy from "./generate-enemy.js";
 
-export default function battle(character) {
-  const randomEnemy = generateEnemy();
+export default function battle(character, randomEnemy) {
+  // const randomEnemy = generateEnemy();
   let winCount = 0;
   let result = '';
 
@@ -11,12 +11,11 @@ export default function battle(character) {
   
   (winCount >= 2 ? result = "Battle Won!" : result = "Battle Lost!");
 
-
-//   something like this
-//   if (result === "Battle Won!") {
-//     character.addItem(randomEnemy.inventory.get((Math.floor(Math.random() * 5) + 1)));
-//   } else {
-//     return result;
-//   }
-  return result;
+  if (result === "Battle Won!") {
+    let item = randomEnemy.inventory.get(Math.floor(Math.random() * (4 + 1)));
+    character.addItem(item);
+    return "Battle Won!";
+  } else {
+    return result;
+  }
 }

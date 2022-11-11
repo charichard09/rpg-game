@@ -3,13 +3,71 @@
 <head>
   <title>rpg-game</title>
 </head>
-<body>
+<body class="jumbotron">
   
   <div id="header">
-    <h3>rpg</h3>
+    <h3>Battle for Spacecodus</h3>
   </div>
 
-  <div id="char-info-div">
+
+  <div class="row">
+    <div class="col-6">
+      <div id="char-info-div">
+        <img src="./images/soldier.png" class="img-fluid hidden" id="soldier-hidden">
+        <img src="./images/alien.png" class="img-fluid hidden" id="alien-hidden">
+        <img src="./images/scientist.png" class="img-fluid hidden" id="scientist-hidden">
+        <form id="select-class-form">
+          <div class="form-group row" id="soldier">
+            <label class="col-4">Soldier</label> 
+            <div class="col-8">
+              <div>
+                <input name="class-select" id="soldier-select_0" type="radio" value="soldier" class="hidden" checked> 
+                <label for="soldier-select_0"><img src="./images/soldier.png" class="img-fluid" id="soldier-img"></label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row" id="alien">
+            <label class="col-4">Alien</label> 
+            <div class="col-8">
+              <div>
+                <input name="class-select" id="alien-select_0" type="radio" value="alien" class="hidden"> 
+                <label for="alien-select_0"><img src="./images/alien.png" class="img-fluid" id="alien-img"></label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row" id="scientist">
+            <label class="col-4">Scientist</label> 
+            <div class="col-8">
+              <div>
+                <input name="class-select" id="scientist-select_0" type="radio" value="scientist" class="hidden"> 
+                <label for="scientist-select_0"><img src="./images/scientist.png" class="img-fluid" id="scientist-img"></label>
+              </div>
+            </div>
+          </div> 
+          <div class="form-group row">
+            <div class="offset-4 col-8">
+              <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+    <div class="col-6">
+      <div id="enemy-info-div">
+        <img src="./images/cthulu.png" class="img-fluid hidden" id="cthulu-hidden">
+        <img src="./images/predator.png" class="img-fluid hidden" id="predator-hidden">
+        <img src="./images/space-marine.png" class="img-fluid hidden" id="space-marine-hidden">
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="battle-button">Battle!</button>
+    <div id="results-div">
+      <ul id="results-ul">
+      </ul>
+    </div>
   </div>
 </body>
 </html>
