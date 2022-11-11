@@ -21,17 +21,14 @@ export default function generateEnemy() {
 
   const lootTable = new Map(
     [
-      ["rock", "This has no value"],
-      ["bottle", "This has no value"],
-      ["weapon", {itemName: "light saber", trait: "4 strength"}],
-      ["armor", {itemName: "hover boots", trait: "4 agility"}],
-      ["armor", {itemName: "glasses", trait: "4 intelligence"}]
+      [0, {"rock": "This has no value"}],
+      [1, {"bottle": "This has no value"}],
+      [2, {"weapon": {itemName: "light saber", trait: "4 strength"}}],
+      [3, {"armor": {itemName: "hover boots", trait: "4 agility"}}],
+      [4, {"armor": {itemName: "glasses", trait: "4 intelligence"}}]
     ]
   );
   randomChar.inventory = lootTable;
-  
-  // randomChar.intelligence = Math.floor(Math.random() * 4) + 1;
-  // randomChar.strength = Math.floor(Math.random() * 4) + 1;
-  // randomChar.agility = Math.floor(Math.random() * 4) + 1;
+
   return randomChar;
 }

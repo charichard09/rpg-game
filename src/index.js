@@ -6,4 +6,18 @@ import Character from './js/character-creation.js';
 //UI Logic
 let newChar = new Character('soldier');
 
-document.querySelector('h3').append(Object.keys(newChar));
+newChar.defaultInventory();
+newChar.addTrait();
+
+let charInfoUl = document.createElement("ul");
+for (const entry of Object.entries(newChar)) {
+  let charInfoLi = document.createElement("li");
+
+  if (entry[0] === "inventory") {
+    charInfoLi.append(Object.entries(newChar[entry[0]]));
+  } else {
+    charInfoLi.append(`${entry[0]}: ${entry[1]}`);
+  }
+  charInfoUl.append(charInfoLi);
+}
+document.getElementById("char-info-div").append("Character:", charInfoUl);

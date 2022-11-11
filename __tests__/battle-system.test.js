@@ -20,5 +20,12 @@ describe ('battle', () => {
     expect(battle(newCharacter)).toEqual("Battle Lost!");
   });
 
-})
+  test ('3. It will return "Battle Won!" if strength and agil character stats are less than random enemy', () => {
+    let newCharacter = new Character('soldier');
+    newCharacter.strength = 0;
+    newCharacter.intelligence = 10;
+    newCharacter.agility = 10;
+    expect(battle(newCharacter)).toEqual("Battle Won!");
+  });
+});
 

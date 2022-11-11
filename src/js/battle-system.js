@@ -13,10 +13,10 @@ export default function battle(character) {
 
 
   //something like this
-  if (result === "Battle Won!") {
-    character.addItem(randomEnemy.inventory.get((Math.floor(Math.random() * 5) + 1)));
-  } else {
-    return result;
-  }
+  // if (result === "Battle Won!") {
+  //   character.addItem(randomEnemy.inventory.get((Math.floor(Math.random() * 5) + 1)));
+  // } else {
+  //   return result;
+  // }
   return result;
 }
