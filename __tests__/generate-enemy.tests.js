@@ -11,6 +11,16 @@ describe('generateEnemy', () => {
   test('2. It will distribute randomly 10 points across 3 stats', () => { 
     let randomChar = generateEnemy();
     expect(randomChar.agility + randomChar.strength + randomChar.intelligence).toEqual(10);
+  });
+
+  test('3. It will add a lootTable to the enemy', () => { 
+    let randomChar = generateEnemy();
+    const [item1, item2, item3, item4, item5] = randomChar.inventory;
+    expect(item1[1]).toEqual(randomChar.inventory.get("rock"));
+    expect(item2[1]).toEqual(randomChar.inventory.get("bottle"));
+    expect(item3[1]).toEqual(randomChar.inventory.get("weapon"));
+    expect(item4[1]).toEqual(randomChar.inventory.get("armor"));
+    expect(item5[1]).toEqual(randomChar.inventory.get("armor"));
 
     // expect(randomChar.agility).toBeGreaterThanOrEqual(0);
     // expect(randomChar.agility).toBeLessThanOrEqual(10);
@@ -38,5 +48,3 @@ describe('generateEnemy', () => {
   //   expect(randomChar.agility).toBeLessThan(5);
   // });
 });
-
-

@@ -11,5 +11,12 @@ export default function battle(character) {
   
   (winCount >= 2 ? result = "Battle Won!" : result = "Battle Lost!");
 
+
+  //something like this
+  if (result === "Battle Won!") {
+    character.addItem(randomEnemy.inventory.get((Math.floor(Math.random() * 5) + 1)));
+  } else {
+    return result;
+  }
   return result;
 }

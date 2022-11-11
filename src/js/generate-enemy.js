@@ -18,6 +18,17 @@ export default function generateEnemy() {
   randomChar.strength = randomArray[Math.floor(Math.random() * 2)];
   randomArray.splice(randomArray.indexOf(randomChar.strength), 1);
   randomChar.intelligence = randomArray[0];
+
+  const lootTable = new Map(
+    [
+      ["rock", "This has no value"],
+      ["bottle", "This has no value"],
+      ["weapon", {itemName: "light saber", trait: "4 strength"}],
+      ["armor", {itemName: "hover boots", trait: "4 agility"}],
+      ["armor", {itemName: "glasses", trait: "4 intelligence"}]
+    ]
+  );
+  randomChar.inventory = lootTable;
   
   // randomChar.intelligence = Math.floor(Math.random() * 4) + 1;
   // randomChar.strength = Math.floor(Math.random() * 4) + 1;
